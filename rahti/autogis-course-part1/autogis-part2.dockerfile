@@ -43,8 +43,6 @@ RUN chgrp -R root /home/jovyan \
     && find /opt/conda -type d -exec chmod g+rwx,o+rx {} \; \
     && find /opt/conda -type f -exec chmod g+rw {} \;
 
-RUN ln -s /usr/bin/env /bin/env
-
 ENV HOME /home/jovyan
 
 COPY ./instance_start_script.sh /usr/local/bin/instance_start_script.sh
